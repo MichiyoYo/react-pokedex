@@ -4,14 +4,16 @@ This is a simple application made with React to practice with context and reduce
 It allows to explore the 150 OG Pokemons by selecting them from a dropdown or navigate to the next one/ previous one with navigation buttons.
 
 The state is managed with the useReducer hook and passed to the components with React Context.
-The list of Pokemon is fetched from [PokeAPI](https://pokeapi.co/)
+The list of Pokemon is fetched from [PokeAPI](https://pokeapi.co/).
+
+[![A screenshot of the app]](https://github.com/MichiyoYo/react-pokedex/blob/main/demo/pokedex.png)
 
 ## Tech Stack
 
 - React
-- (Material UI)[https://mui.com/]
-- (Styled Components)[https://styled-components.com/]
-- (PokeAPI)[https://pokeapi.co/]
+- [Material UI](https://mui.com/)
+- [Styled Components](https://styled-components.com/)
+- [PokeAPI](https://pokeapi.co/)
 
 ## Installation
 
