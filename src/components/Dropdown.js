@@ -6,6 +6,11 @@ import {
   getPrevPokemon,
 } from "../api/utils";
 import { AppContext } from "./Main";
+import { styled } from "@mui/system";
+
+const CustomSelect = styled(Select)({
+  textTransform: "capitalize",
+});
 
 function Dropdown(props) {
   const { state, data, dispatch } = useContext(AppContext);
@@ -13,7 +18,7 @@ function Dropdown(props) {
 
   return (
     <div>
-      <Select
+      <CustomSelect
         sx={{
           margin: `20px`,
           padding: `0`,
@@ -30,11 +35,17 @@ function Dropdown(props) {
         }
       >
         {data.map((data, id) => (
-          <MenuItem key={id} value={data.name}>
+          <MenuItem
+            sx={{
+              textTransform: "capitalize",
+            }}
+            key={id}
+            value={data.name}
+          >
             {data.name}
           </MenuItem>
         ))}
-      </Select>
+      </CustomSelect>
     </div>
   );
 }

@@ -17,8 +17,8 @@ const Sprite = styled.img`
   padding: 33px;
   background: #0096887d;
   border-radius: 50%;
-  height: 90px;
-  width: 90px;
+  height: 50px;
+  width: 50px;
   margin-top: 27px;
 `;
 
