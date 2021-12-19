@@ -7,11 +7,13 @@ import {
 import { AppContext } from "./Main";
 
 function Dropdown(props) {
-  const { data, dispatch } = useContext(AppContext);
+  const { state, data, dispatch } = useContext(AppContext);
+  const { currPokemon } = state;
 
   return (
     <div>
       <select
+        value={currPokemon.name}
         onChange={(e) =>
           dispatch({
             type: "SELECT_POKEMON",
