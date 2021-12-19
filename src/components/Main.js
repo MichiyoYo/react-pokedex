@@ -68,7 +68,7 @@ function Main(props) {
   if (error) return "Error!";
 
   return (
-    <AppContext.Provider value={{ data, dispatch }}>
+    <AppContext.Provider value={{ state, data, dispatch }}>
       <Dropdown />
       <PokemonCard />
       <Navigation />
