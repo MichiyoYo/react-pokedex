@@ -1,8 +1,19 @@
 import React, { createContext, useEffect, useReducer, useState } from "react";
-import { getNextPokemon, getPrevPokemon } from "../api/utils";
 import Dropdown from "./Dropdown";
 import Navigation from "./Navigation";
 import PokemonCard from "./PokemonCard";
+
+import { createTheme } from "@mui/material/styles";
+import { teal, deepPurple } from "@mui/material/colors";
+import { ThemeProvider } from "@emotion/react";
+import { Box } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    primary: teal,
+    secondary: deepPurple,
+  },
+});
 
 export const AppContext = createContext();
 function Main(props) {
@@ -77,9 +88,19 @@ function Main(props) {
 
   return (
     <AppContext.Provider value={{ state, data, dispatch }}>
-      <Dropdown />
-      <PokemonCard />
-      <Navigation />
+      <ThemeProvider theme={theme}>
+        <Box
+          sx={{
+            width: 350,
+            height: 500,
+            padding: "20px",
+          }}
+        >
+          <Dropdown />
+          <PokemonCard />
+          <Navigation />
+        </Box>
+      </ThemeProvider>
     </AppContext.Provider>
   );
 }

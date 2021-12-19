@@ -1,3 +1,4 @@
+import { MenuItem, NativeSelect, Select } from "@mui/material";
 import React, { useContext } from "react";
 import {
   findPokemonByName,
@@ -12,7 +13,12 @@ function Dropdown(props) {
 
   return (
     <div>
-      <select
+      <Select
+        sx={{
+          margin: `20px`,
+          padding: `0`,
+          bgcolor: "#ffffffab",
+        }}
         value={currPokemon.name}
         onChange={(e) =>
           dispatch({
@@ -24,11 +30,11 @@ function Dropdown(props) {
         }
       >
         {data.map((data, id) => (
-          <option key={id} value={data.name}>
+          <MenuItem key={id} value={data.name}>
             {data.name}
-          </option>
+          </MenuItem>
         ))}
-      </select>
+      </Select>
     </div>
   );
 }
