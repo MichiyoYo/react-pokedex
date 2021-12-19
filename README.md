@@ -6,7 +6,7 @@ It allows to explore the 150 OG Pokemons by selecting them from a dropdown or na
 The state is managed with the useReducer hook and passed to the components with React Context.
 The list of Pokemon is fetched from [PokeAPI](https://pokeapi.co/).
 
-<img src="https://github.com/MichiyoYo/react-pokedex/blob/main/demo/pokedex.png" width="150">
+<img src="https://github.com/MichiyoYo/react-pokedex/blob/main/demo/pokedex.png" width="250">
 
 ## Tech Stack
 
