@@ -31,9 +31,17 @@ function Main(props) {
           prev: action.prev,
         };
       case "GOTO_NEXT":
-        return state;
+        return {
+          currPokemon: action.currPokemon,
+          next: action.next,
+          prev: action.prev,
+        };
       case "GOTO_PREV":
-        return state;
+        return {
+          currPokemon: action.currPokemon,
+          next: action.next,
+          prev: action.prev,
+        };
       default:
         return state;
     }

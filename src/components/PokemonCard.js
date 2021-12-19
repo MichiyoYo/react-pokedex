@@ -50,7 +50,7 @@ function PokemonCard(props) {
 
   return (
     <div>
-      <img src={spriteUrl} alt="pokemon" />
+      <img src={spriteUrl} alt={`an animated sprite of ${currPokemon.name}`} />
       <h2 className="pokemon-name">{currPokemon.name}</h2>
       <p className="pokemon-description">{description}</p>
     </div>
