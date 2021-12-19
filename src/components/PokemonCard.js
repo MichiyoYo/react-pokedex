@@ -1,6 +1,5 @@
 import { Card } from "@mui/material";
-import React, { useContext, useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useContext, useState, useEffect } from "react";
 import styled from "styled-components";
 import { AppContext } from "./Main";
 
